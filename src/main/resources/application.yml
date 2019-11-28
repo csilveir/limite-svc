@@ -49,7 +49,14 @@ app:
   topic: transaction
   returnTopic: transaction_extorno
 
-
+management:
+  metrics:
+    enable:
+      root: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
 
 limite:
   valorTotal: 20000
