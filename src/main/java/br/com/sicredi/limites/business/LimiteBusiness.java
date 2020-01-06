@@ -49,8 +49,8 @@ public class LimiteBusiness {
             kafkaSender.send(transactionDTO);
 
         } else {
-            limiteDiario.setValor(limiteDiario.getValor().subtract(transactionDTO.getValor()));
-            limiteDiarioRepository.save(limiteDiario);
+                limiteDiario.setValor(limiteDiario.getValor().subtract(transactionDTO.getValor()));
+                limiteDiarioRepository.save(limiteDiario);
         }
     }
 }
