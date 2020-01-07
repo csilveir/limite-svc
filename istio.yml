@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: limite-svc
+  labels:
+    app: limite-svc
+    service: limite-svc
+spec:
+  ports:
+    - port: 8081
+      name: http
+  selector:
+    app: limite-svc
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sa-limite-svc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: limite-svc-v1
+  labels:
+    app: limite-svc
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: limite-svc
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: limite-svc
+        version: v1
+    spec:
+      serviceAccountName: sa-limite-svc
+      containers:
+        - name: limite-svc
+          image: docker.io/csilveir/limite-svc:0.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
