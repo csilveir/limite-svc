@@ -7,6 +7,6 @@ RUN ls -lsah
 RUN ./gradlew clean build
 RUN mv /tmp/limite-svc/build/libs/*.jar /tmp/app.jar
 RUN rm -rf /tmp/limite-svc/
-EXPOSE 8082
+EXPOSE 8081
 
 ENTRYPOINT ["java", "-jar", "/tmp/app.jar"]
