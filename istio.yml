@@ -39,7 +39,7 @@ spec:
       serviceAccountName: sa-limite-svc
       containers:
         - name: limite-svc
-          image: docker.io/csilveir/limite-svc:VERSION_APP
+          image: 172.30.1.1:5000/workshop/limite-svc:VERSION_APP
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081
