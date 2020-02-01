@@ -1,11 +1,11 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "limite-svc-deploy"
+  name: "prevencaofraudes-svc-deploy"
 spec:
   source:
     git:
-      uri: "https://github.com/csilveir/limite-svc"
+      uri: "https://github.com/csilveir/prevencaofraudes-svc"
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile_Deploy

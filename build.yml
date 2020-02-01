@@ -1,15 +1,15 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "limite-svc-build"
+  name: "prevencaofraudes-svc-build"
 spec:
   source:
     git:
-      uri: "https://github.com/csilveir/limite-svc"
+      uri: "https://github.com/csilveir/prevencaofraudes-svc"
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
   output:
     to:
       kind: "DockerImage"
-      name: "172.30.1.1:5000/workshop/limite-svc:VERSION_APP"
+      name: "172.30.1.1:5000/workshop/prevencaofraudes-svc:VERSION_APP"

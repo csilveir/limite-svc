@@ -1,45 +1,45 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: limite-svc
+  name: prevencaofraudes-svc
   labels:
-    app: limite-svc
-    service: limite-svc
+    app: prevencaofraudes-svc
+    service: prevencaofraudes-svc
 spec:
   ports:
     - port: 8081
       name: http
   selector:
-    app: limite-svc
+    app: prevencaofraudes-svc
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: sa-limite-svc
+  name: sa-prevencaofraudes-svc
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: limite-svc-v1
+  name: prevencaofraudes-svc-v1
   labels:
-    app: limite-svc
+    app: prevencaofraudes-svc
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: limite-svc
+      app: prevencaofraudes-svc
       version: v1
   template:
     metadata:
       labels:
-        app: limite-svc
+        app: prevencaofraudes-svc
         version: v1
     spec:
-      serviceAccountName: sa-limite-svc
+      serviceAccountName: sa-prevencaofraudes-svc
       containers:
-        - name: limite-svc
-          image: 172.30.1.1:5000/workshop/limite-svc:VERSION_APP
+        - name: prevencaofraudes-svc
+          image: 172.30.1.1:5000/workshop/prevencaofraudes-svc:VERSION_APP
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081

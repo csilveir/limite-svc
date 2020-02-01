@@ -3,5 +3,5 @@ oc login https://ec2-54-202-93-168.us-west-2.compute.amazonaws.com:8443 -u devel
 sed -i "s/VERSION_APP/$(cat gradle.properties | grep "$version" | cut -d'=' -f2)/g" build.yml
 oc project workshop
 oc replace -f build.yml
-oc start-build limite-svc-build
+oc start-build prevencaofraudes-svc-build
 git checkout build.yml
