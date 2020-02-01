@@ -2,6 +2,7 @@ package br.com.sicredi.limites.business;
 
 import br.com.sicredi.limites.domain.LimiteDiario;
 import br.com.sicredi.limites.domain.LimiteDiarioRepository;
+import br.com.sicredi.limites.dto.SituacaoEnum;
 import br.com.sicredi.limites.dto.TransactionDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -46,6 +47,7 @@ public class LimiteBusiness {
         if (limiteDiario.getValor().compareTo(transactionDTO.getValor()) < 0) {
 
             log.info("Transação excede valor diario.: " + transactionDTO);
+            transactionDTO.setSituacao(SituacaoEnum.EM_SUSPEITA_FRAUDE);
             kafkaSender.send(transactionDTO);
 
         } else {

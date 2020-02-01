@@ -25,6 +25,15 @@ public class TransactionDTO implements Serializable {
     private BeneficiatioDto beneficiario;
     private TipoTransacao tipoTransacao;
     private UUID uui;
+    private SituacaoEnum situacao;
+
+    public void naoAnalisada() {
+        setSituacao(SituacaoEnum.NAO_ANALISADA);
+    }
+
+    public void analisada() {
+        setSituacao(SituacaoEnum.ANALISADA);
+    }
 
 
 }
