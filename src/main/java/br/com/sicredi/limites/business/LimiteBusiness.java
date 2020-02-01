@@ -51,6 +51,8 @@ public class LimiteBusiness {
             kafkaSender.send(transactionDTO);
 
         } else {
+                transactionDTO.setSituacao(SituacaoEnum.ANALISADA);
+                kafkaSender.send(transactionDTO);
                 limiteDiario.setValor(limiteDiario.getValor().subtract(transactionDTO.getValor()));
                 limiteDiarioRepository.save(limiteDiario);
         }

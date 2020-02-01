@@ -19,7 +19,7 @@ spring:
     password:
 
   kafka:
-    bootstrap-servers: ec2-54-212-34-230.us-west-2.compute.amazonaws.com:9092
+    bootstrap-servers: localhost:9092
     consumer:
       client-id: prevencaofraudes-svc-consumer
       group-id: limite-group
