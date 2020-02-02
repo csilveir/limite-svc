@@ -1,4 +1,4 @@
-package br.com.sicredi.limites.dto;
+package br.com.cdsoft.prevencao.dto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

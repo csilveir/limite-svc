@@ -1,4 +1,4 @@
-package br.com.sicredi.limites.domain;
+package br.com.cdsoft.prevencao.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

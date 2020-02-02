@@ -1,7 +1,6 @@
-package br.com.sicredi.limites.business;
+package br.com.cdsoft.prevencao.business;
 
-import br.com.sicredi.limites.domain.LimiteDiario;
-import br.com.sicredi.limites.dto.TransactionDTO;
+import br.com.cdsoft.prevencao.dto.TransactionDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

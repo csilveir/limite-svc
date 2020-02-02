@@ -1,4 +1,4 @@
-package br.com.sicredi.limites.config;
+package br.com.cdsoft.prevencao.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;

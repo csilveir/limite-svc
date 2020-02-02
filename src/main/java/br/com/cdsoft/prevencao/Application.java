@@ -1,4 +1,4 @@
-package br.com.sicredi.limites;
+package br.com.cdsoft.prevencao;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -27,8 +27,8 @@ import java.util.concurrent.TimeUnit;
 @EnableCaching
 @EnableKafka
 @EnableJpaRepositories
-@ComponentScan("br.com.sicredi")
-public class LimiteApplication {
+@ComponentScan("br.com.cdsoft")
+public class Application {
 
     @Value("${spring.cache.expireAfterWrite}")
     public int expireAfterWrite;
@@ -42,7 +42,7 @@ public class LimiteApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(LimiteApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Bean

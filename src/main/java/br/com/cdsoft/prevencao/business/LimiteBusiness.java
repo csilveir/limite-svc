@@ -1,9 +1,9 @@
-package br.com.sicredi.limites.business;
+package br.com.cdsoft.prevencao.business;
 
-import br.com.sicredi.limites.domain.LimiteDiario;
-import br.com.sicredi.limites.domain.LimiteDiarioRepository;
-import br.com.sicredi.limites.dto.SituacaoEnum;
-import br.com.sicredi.limites.dto.TransactionDTO;
+import br.com.cdsoft.prevencao.domain.LimiteDiario;
+import br.com.cdsoft.prevencao.domain.LimiteDiarioRepository;
+import br.com.cdsoft.prevencao.dto.SituacaoEnum;
+import br.com.cdsoft.prevencao.dto.TransactionDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.sleuth.annotation.NewSpan;

@@ -1,4 +1,4 @@
-package br.com.sicredi.limites.dto;
+package br.com.cdsoft.prevencao.dto;
 
 public enum TipoTransacao {
 

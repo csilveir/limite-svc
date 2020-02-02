@@ -1,4 +1,4 @@
-package br.com.sicredi.limites.domain;
+package br.com.cdsoft.prevencao.domain;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
